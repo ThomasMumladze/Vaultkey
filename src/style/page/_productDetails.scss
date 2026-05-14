@@ -1,0 +1,551 @@
+article {
+    .product-details {
+        max-width: 900px;
+        margin: 0 auto;
+
+        // ===== Hero section ===== //
+        &--hero {
+            align-items: start;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 24px;
+            margin-bottom: 24px;
+
+            // ===== Cover image ===== //
+            .cover {
+                width: 100%;
+                aspect-ratio: 3 / 4;
+                border-radius: var(--radius);
+                overflow: hidden;
+                border: 1px solid var(--border);
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            // ===== Info column ===== //
+            .info {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                text-transform: capitalize;
+
+                // ===== Genre  ===== //
+                &--genre {
+                    font-size: 11px;
+                    color: var(--accent);
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    letter-spacing: 0.08em;
+                }
+
+                // ===== Title  ===== //
+                &--title {
+                    font-size: 26px;
+                    font-weight: 700;
+                    color: var(--text);
+                    line-height: 1.2;
+                }
+                // ===== Sub-title  ===== //
+                &--sub {
+                    color: var(--text-2);
+                    font-size: 13px;
+                }
+
+                // ===== Rating   ===== //
+                &--stars-row {
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+
+                    .stars {
+                        display: flex;
+                        color: #333;
+                        font-size: 15px;
+                        gap: 2px;
+                    }
+
+                    .on {
+                        color: var(--star);
+                    }
+
+                    .rating-value {
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: var(--text);
+                    }
+
+                    .rating-cnt {
+                        font-size: 12px;
+                        color: var(--text-3);
+                    }
+                }
+
+                // ===== Platforms  ===== //
+                &--platforms {
+                    display: flex;
+                    gap: 6px;
+                    flex-wrap: wrap;
+
+                    .platform {
+                        background: #2a2a2e;
+                        color: #ccc;
+                        font-size: 11px;
+                        font-weight: 600;
+                        padding: 4px 10px;
+                        border-radius: 20px;
+                        border: 1px solid var(--border);
+                        display: flex;
+                        align-items: center;
+                        gap: 4px;
+                    }
+                }
+
+                // ===== Stock status  ===== //
+                &--stock-row {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+
+                    .stock-dot {
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background: #34d399;
+                    }
+
+                    .stock-text {
+                        font-size: 12px;
+                        color: #6ee7b7;
+                        background: #052e1e;
+                        padding: 4px 10px;
+                        border-radius: 20px;
+                        font-weight: 500;
+                    }
+                }
+
+                // ===== Price & discount  ===== //
+                &--price-block {
+                    display: flex;
+                    align-items: baseline;
+                    gap: 10px;
+
+                    .price-old {
+                        font-size: 14px;
+                        color: var(--text-3);
+                        text-decoration: line-through;
+                    }
+
+                    .price-new {
+                        font-size: 28px;
+                        font-weight: 700;
+                        color: var(--green);
+                    }
+                    .price-disc {
+                        background: #052e1e;
+                        color: #6ee7b7;
+                        font-size: 11px;
+                        font-weight: 700;
+                        padding: 3px 8px;
+                        border-radius: 20px;
+                    }
+                }
+
+                // ===== Actions (add to cart, wishlist)  ===== //
+                &--actions {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+
+                    .btn-cart {
+                        background: var(--accent);
+                        color: #fff;
+                        border: none;
+                        border-radius: var(--radius);
+                        padding: 11px 24px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        transition: background 0.15s;
+                        flex: 1;
+
+                        &:hover {
+                            background: #0ea5e9;
+                        }
+                    }
+
+                    .btn-wish {
+                        background: var(--bg-surface);
+                        color: var(--text);
+                        border: 1px solid var(--border2);
+                        border-radius: var(--radius);
+                        padding: 10px 14px;
+                        cursor: pointer;
+                        transition: background 0.15s;
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
+                        font-size: 13px;
+                        font-weight: 500;
+                        white-space: nowrap;
+
+                        &:hover {
+                            background: #2a2a30;
+                            color: #f87171;
+                        }
+                    }
+                }
+
+                // ===== Tags  ===== //
+                &--tags {
+                    display: flex;
+                    gap: 6px;
+                    flex-wrap: wrap;
+
+                    .tag {
+                        background: #0c2233;
+                        color: #7dd3fc;
+                        font-size: 11px;
+                        font-weight: 500;
+                        padding: 3px 9px;
+                        border-radius: 20px;
+                    }
+                }
+            }
+        }
+
+        .section {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            overflow: hidden;
+            margin-bottom: 24px;
+
+            // ===== Description & details ===== //
+            &--head {
+                padding: 14px 18px;
+                border-bottom: 1px solid var(--border);
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--text);
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            // ===== Trailer & gallery ===== //
+            &--body {
+                padding: 16px 18px;
+
+                .section--trailer-hero {
+                    aspect-ratio: 16 / 9;
+                    border-radius: var(--radius);
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    overflow: hidden;
+                    margin-bottom: 10px;
+                    border: 1px solid var(--border);
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        opacity: 0.7;
+                    }
+
+                    .trailer-play {
+                        position: absolute;
+                        width: 56px;
+                        height: 56px;
+                        background: rgba(255, 255, 255, 0.9);
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 22px;
+                        color: #111;
+                        cursor: pointer;
+                        transition: transform 0.15s;
+
+                        &:hover {
+                            transform: scale(1.08);
+                        }
+                    }
+                }
+
+                &--gallery {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 8px;
+
+                    .thumb {
+                        aspect-ratio: 16 / 9;
+                        border-radius: var(--radius);
+                        color: var(--text);
+                        overflow: hidden;
+                        border: 1px solid var(--border);
+                        cursor: pointer;
+                        position: relative;
+                        transition: border-color 0.15s;
+
+                        &:hover {
+                            border-color: var(--accent);
+                        }
+                    }
+
+                    .video {
+                        &::after {
+                            content: "▶";
+                            position: absolute;
+                            inset: 0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background: rgba(0, 0, 0, 0.45);
+                            color: #fff;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+
+            // ==== System requirements ==== //
+            &--sys-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+
+                // ===== Sys req column ===== //
+                .sys-col {
+                    border-right: 1px solid var(--border);
+                    padding: 14px;
+
+                    //===== Column label ===== //
+                    .sys-label {
+                        font-size: 11px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        letter-spacing: 0.07em;
+                        color: var(--text-3);
+                        margin-bottom: 10px;
+                    }
+
+                    // ===== Sys req row (key-value pair) ===== //
+                    .sys-row {
+                        display: flex;
+                        gap: 8px;
+                        margin-bottom: 8px;
+                        font-size: 13px;
+
+                        .sys-key {
+                            color: var(--text-2);
+                            min-width: 90px;
+                            flex-shrink: 0;
+                        }
+
+                        .sys-val {
+                            color: var(--text);
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+
+            // ===== DLC & editions ===== //
+            &--dlc-list {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                padding: 16px 18px;
+
+                .dlc-card {
+                    background: var(--bg-surface);
+                    border-radius: var(--radius);
+                    border: 1px solid var(--border);
+                    padding: 12px;
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    cursor: pointer;
+                    transition: border-color 0.15s;
+
+                    .dlc-image {
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 6px;
+                        background: var(--border);
+                        flex-shrink: 0;
+                        overflow: hidden;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .dlc-name {
+                        font-size: 13px;
+                        font-weight: 600;
+                        color: var(--text);
+                    }
+
+                    .dlc-type {
+                        font-size: 11px;
+                        color: var(--text-3);
+                    }
+
+                    .dlc-price {
+                        font-size: 13px;
+                        font-weight: 600;
+                        color: var(--green);
+                        margin-top: 2px;
+                    }
+                }
+            }
+
+            // ===== Reviews ===== //
+            &--review-list {
+                display: flex;
+                flex-direction: column;
+                padding: 16px 18px;
+                gap: 14px;
+
+                .review {
+                    border-bottom: 1px solid var(--border);
+                    padding-bottom: 14px;
+
+                    //===== Review header (avatar, name, date) ===== //
+                    &-head {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        margin-bottom: 6px;
+
+                        .rev-avatar {
+                            width: 32px;
+                            height: 32px;
+                            border-radius: 50%;
+                            background: var(--bg-surface);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 12px;
+                            font-weight: 600;
+                            color: var(--text-2);
+                            border: 1px solid var(--border);
+                            flex-shrink: 0;
+                        }
+
+                        .rev-name {
+                            font-size: 13px;
+                            font-weight: 600;
+                            color: var(--text);
+                        }
+
+                        .rev-date {
+                            font-size: 11px;
+                            color: var(--text-3);
+                        }
+                    }
+
+                    //===== Review body (stars, text, helpful) ===== //
+                    &-stars {
+                        display: flex;
+                        gap: 2px;
+                        margin-bottom: 5px;
+
+                        .rev-stars {
+                            font-size: 12px;
+                            color: #333;
+                        }
+
+                        .on {
+                            color: var(--star);
+                        }
+                    }
+
+                    //===== Review text  ===== //
+                    &-text {
+                        font-size: 13px;
+                        color: var(--text-2);
+                        line-height: 1.6;
+                    }
+
+                    // ==== Review helpful count ===== //
+                    &-helpful {
+                        font-size: 11px;
+                        color: var(--text-3);
+                        margin-top: 6px;
+
+                        span {
+                            color: var(--accent);
+                            cursor: pointer;
+                            margin-left: 6px;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // ===== Similar products ===== //
+            &--similar-product {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                padding: 16px 18px;
+                gap: 12px;
+
+                .similar-card {
+                    cursor: pointer;
+                    transition: transform 0.15s;
+
+                    // ===== Product image ===== //
+                    &--img {
+                        aspect-ratio: 3 / 4;
+                        border-radius: var(--radius);
+                        overflow: hidden;
+                        border: 1px solid var(--border);
+                        margin-bottom: 8px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    // ===== Product title ===== //
+                    &--title {
+                        font-size: 12px;
+                        font-weight: 600;
+                        color: var(--text);
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    // ===== Product price ===== //
+                    &--price {
+                        font-size: 12px;
+                        color: var(--green);
+                        font-weight: 500;
+                    }
+
+                    &:hover {
+                        transform: translateY(-3px);
+                    }
+                }
+            }
+        }
+    }
+}
