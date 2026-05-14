@@ -1,12 +1,7 @@
 import "./App.scss";
-import ProductDetails from "./page/ProductDetails";
 
 function App() {
-    return (
-        <>
-            <ProductDetails />
-        </>
-    );
+    return <></>;
 }
 
 export default App;
