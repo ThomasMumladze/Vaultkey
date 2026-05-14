@@ -1,7 +1,12 @@
-import "./App.css";
+import "./App.scss";
+import ProductDetails from "./page/ProductDetails";
 
 function App() {
-    return <></>;
+    return (
+        <>
+            <ProductDetails />
+        </>
+    );
 }
 
 export default App;
