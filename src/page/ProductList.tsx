@@ -59,11 +59,9 @@ const ProductList = () => {
                         </div>
                         <hr />
 
-                        <div
-                            className={`container--product-listing--list-grid ${displayFlexSetter ? "container--product-listing--list-flex" : ""}`}
-                        >
+                        <div className={`container--product-listing--list-grid`}>
                             {paginateData.map((_: any, i: number) => (
-                                <Card displayFLexSetter={displayFlexSetter} key={i} />
+                                <Card key={i} />
                             ))}
                         </div>
 

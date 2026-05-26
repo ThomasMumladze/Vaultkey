@@ -1,6 +1,7 @@
 .pages--product-list {
     max-width: 1280px;
     margin: 0 auto;
+    padding: 0 16px;
 
     section {
         padding: 40px 0px;
@@ -66,12 +67,6 @@
                     grid-template-columns: repeat(3, 1fr);
                     grid-column-gap: 20px;
                     grid-row-gap: 32px;
-                }
-
-                &--list-flex {
-                    display: flex;
-                    flex-direction: column;
-                    width: 100%;
                 }
 
                 &--pagination {

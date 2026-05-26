@@ -93,33 +93,3 @@
         padding: 12px 0px;
     }
 }
-
-.card-flex-display {
-    display: flex;
-
-    a {
-        display: flex;
-        text-wrap: nowrap;
-
-        .card--image {
-            margin-right: 16px;
-            width: 306px;
-        }
-    }
-
-    button {
-        margin-top: 12px;
-    }
-
-    .card-btn--action-flex {
-        display: flex;
-        flex-direction: column;
-
-        .wishList,
-        .favorite {
-            position: unset;
-            padding: 6px 18px !important;
-            width: 100% !important;
-        }
-    }
-}

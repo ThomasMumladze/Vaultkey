@@ -11,17 +11,12 @@ import { PiBookmarksSimpleFill } from "react-icons/pi"; //after add in wishlist
 import { BsCartCheck } from "react-icons/bs";
 import { BsCartCheckFill } from "react-icons/bs"; //after add in cart
 
-interface Props {
-    displayFLexSetter: boolean;
-}
-
-const Card = (props: Props) => {
-    const { displayFLexSetter } = props;
+const Card = () => {
     //remove after implementation
     let addItem = true;
 
     return (
-        <figure className={`card ${displayFLexSetter ? "card-flex-display" : ""}`}>
+        <figure className={`card`}>
             <a href="#">
                 <div className="card--image">
                     <img
@@ -41,17 +36,15 @@ const Card = (props: Props) => {
                 </figcaption>
             </a>
 
-            <div className={`card-btn--action ${displayFLexSetter ? "card-btn--action-flex" : ""}`}>
+            <div className={`card-btn--action `}>
                 {/* ============ add to wish list ============  */}
                 <Button btnFunc={() => {}} className={`wishList ${addItem ? "card--item-add" : ""}`}>
                     {addItem ? <PiBookmarksSimpleFill /> : <PiBookmarksSimpleLight />}{" "}
-                    {displayFLexSetter ? "add to wishlist" : ""}
                 </Button>
 
                 {/* ============ add to favorite ============  */}
                 <Button btnFunc={() => {}} className={`favorite ${addItem ? "card--item-add" : ""}`}>
                     {addItem ? <IoMdHeart /> : <IoIosHeartEmpty />}
-                    {displayFLexSetter ? "add to favorite" : ""}
                 </Button>
 
                 {/* ============ add to cart ============ */}
