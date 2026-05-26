@@ -35,31 +35,33 @@ npm run preview
 
 ## Project Structure
 
-src/
-├── assets/ # Static assets (images, icons, fonts)
-├── components/ # Reusable UI components
-│ ├── Button.tsx
-│ ├── Card.tsx
-│ └── Filter.tsx
-├── constants/ # Static data & constants
-│ └── filter.ts
-├── hooks/ # Custom React hooks
-│ └── usePagination.ts
-├── page/ # Page-level components
-│ ├── Home.tsx
-│ ├── ProductDetails.tsx
-│ └── ProductList.tsx
-└── style/ # SCSS styles
-├── components/
-│ ├── \_button.scss
-│ ├── \_card.scss
-│ └── \_filter.scss
-├── page/
-│ ├── \_product-list.scss
-│ └── \_productDetails.scss
-├── \_index.scss
-├── App.scss
-└── index.scss
+```
+  src/
+  ├── assets/ # Static assets (images, icons, fonts)
+  ├── components/ # Reusable UI components
+  │ ├── Button.tsx
+  │ ├── Card.tsx
+  │ └── Filter.tsx
+  ├── constants/ # Static data & constants
+  │ └── filter.ts
+  ├── hooks/ # Custom React hooks
+  │ └── usePagination.ts
+  ├── page/ # Page-level components
+  │ ├── Home.tsx
+  │ ├── ProductDetails.tsx
+  │ └── ProductList.tsx
+  └── style/ # SCSS styles
+  ├── components/
+  │ ├── \_button.scss
+  │ ├── \_card.scss
+  │ └── \_filter.scss
+  ├── page/
+  │ ├── \_product-list.scss
+  │ └── \_productDetails.scss
+  ├── \_index.scss
+  ├── App.scss
+  └── index.scss
+```
 
 ## Scripts
 
