@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
-const usePagination = (data: any) => {
+const usePagination = (data: any, itemsPerPage: number) => {
     const [currentPage, setCurrentPage] = useState(1);
-    const ITEMS_PER_PAGE = 15;
+    const ITEMS_PER_PAGE = itemsPerPage;
     const paginateData = data.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE);
     const totalPage = Math.ceil(data.length / ITEMS_PER_PAGE);
 

@@ -11,22 +11,17 @@ import { PiBookmarksSimpleFill } from "react-icons/pi"; //after add in wishlist
 import { BsCartCheck } from "react-icons/bs";
 import { BsCartCheckFill } from "react-icons/bs"; //after add in cart
 
-const Card = () => {
+interface Props {
+    displayFLexSetter: boolean;
+}
+
+const Card = (props: Props) => {
+    const { displayFLexSetter } = props;
     //remove after implementation
     let addItem = true;
 
     return (
-        <figure className="card">
-            {/* ============ add to wish list ============  */}
-            <Button btnFunc={() => {}} className={`card--wishList ${addItem ? "card--item-add" : ""}`}>
-                {addItem ? <PiBookmarksSimpleFill /> : <PiBookmarksSimpleLight />}
-            </Button>
-
-            {/* ============ add to favorite ============  */}
-            <Button btnFunc={() => {}} className={`card--favorite ${addItem ? "card--item-add" : ""}`}>
-                {addItem ? <IoMdHeart /> : <IoIosHeartEmpty />}
-            </Button>
-
+        <figure className={`card ${displayFLexSetter ? "card-flex-display" : ""}`}>
             <a href="#">
                 <div className="card--image">
                     <img
@@ -46,18 +41,32 @@ const Card = () => {
                 </figcaption>
             </a>
 
-            {/* ============ add to cart ============ */}
-            <Button btnFunc={() => {}} className="card--btn">
-                {addItem ? (
-                    <>
-                        <BsCartCheckFill /> remove from cart
-                    </>
-                ) : (
-                    <>
-                        <BsCartCheck /> add to cart
-                    </>
-                )}
-            </Button>
+            <div className={`card-btn--action ${displayFLexSetter ? "card-btn--action-flex" : ""}`}>
+                {/* ============ add to wish list ============  */}
+                <Button btnFunc={() => {}} className={`wishList ${addItem ? "card--item-add" : ""}`}>
+                    {addItem ? <PiBookmarksSimpleFill /> : <PiBookmarksSimpleLight />}{" "}
+                    {displayFLexSetter ? "add to wishlist" : ""}
+                </Button>
+
+                {/* ============ add to favorite ============  */}
+                <Button btnFunc={() => {}} className={`favorite ${addItem ? "card--item-add" : ""}`}>
+                    {addItem ? <IoMdHeart /> : <IoIosHeartEmpty />}
+                    {displayFLexSetter ? "add to favorite" : ""}
+                </Button>
+
+                {/* ============ add to cart ============ */}
+                <Button btnFunc={() => {}} className="card--btn">
+                    {addItem ? (
+                        <>
+                            <BsCartCheckFill /> remove from cart
+                        </>
+                    ) : (
+                        <>
+                            <BsCartCheck /> add to cart
+                        </>
+                    )}
+                </Button>
+            </div>
         </figure>
     );
 };

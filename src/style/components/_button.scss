@@ -9,7 +9,9 @@
     justify-content: center;
     padding: 6px 12px;
     text-transform: capitalize;
-    transition: 0.17s ease-in-out;
+    transition:
+        border 0.17s ease-in-out,
+        background 0.17s ease-in-out;
     user-select: none;
 
     &:hover {

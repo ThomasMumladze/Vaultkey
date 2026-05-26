@@ -1,5 +1,36 @@
 .card {
     position: relative;
+    gap: 16px;
+
+    &-btn--action {
+        .wishList,
+        .favorite {
+            background-color: #fff !important;
+            border: solid 1px #ccc !important;
+            position: absolute;
+            padding: 6px 0px !important;
+            right: 8px;
+            top: 8px;
+            transform: rotate(0deg);
+            width: 36px;
+            z-index: 3;
+
+            svg {
+                flex-shrink: 0;
+                height: 20px;
+                transition: 0.17s ease-in-out;
+                width: 20px;
+            }
+
+            &:hover {
+                border: solid 1px #007979 !important;
+            }
+        }
+
+        .favorite {
+            right: 50px;
+        }
+    }
 
     &--image {
         border-radius: 8px;
@@ -51,36 +82,8 @@
         }
     }
 
-    &--wishList,
-    &--favorite {
-        background-color: #fff !important;
-        border: solid 1px #ccc !important;
-        position: absolute;
-        padding: 6px 0px !important;
-        right: 8px;
-        top: 8px;
-        transform: rotate(0deg);
-        width: 36px;
-        z-index: 3;
-
-        svg {
-            flex-shrink: 0;
-            height: 20px;
-            transition: 0.17s ease-in-out;
-            width: 20px;
-        }
-
-        &:hover {
-            border: solid 1px #007979 !important;
-        }
-    }
-
     &--item-add {
         transform: rotate(360deg);
-    }
-
-    &--favorite {
-        right: 50px;
     }
 
     figcaption {
@@ -88,5 +91,35 @@
         display: flex;
         gap: 5px;
         padding: 12px 0px;
+    }
+}
+
+.card-flex-display {
+    display: flex;
+
+    a {
+        display: flex;
+        text-wrap: nowrap;
+
+        .card--image {
+            margin-right: 16px;
+            width: 306px;
+        }
+    }
+
+    button {
+        margin-top: 12px;
+    }
+
+    .card-btn--action-flex {
+        display: flex;
+        flex-direction: column;
+
+        .wishList,
+        .favorite {
+            position: unset;
+            padding: 6px 18px !important;
+            width: 100% !important;
+        }
     }
 }
