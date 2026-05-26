@@ -1,73 +1,71 @@
-# React + TypeScript + Vite
+# VaultKey
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based marketplace for game keys, gift cards, and digital products.
 
-Currently, two official plugins are available:
+## Requirements
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Node.js `v24.12.0`
+- npm
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React `19.2.6`
+- TypeScript `6.0.2`
+- Vite `8.0.12`
+- SCSS / Sass
+- React Router `7.15.1`
+- Axios `1.16.1`
+- React Icons `5.6.0`
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
+# Install dependencies
+npm install
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Start development server
+npm run dev / npm start
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Build for production
+npm run build
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Preview production build
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Project Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+src/
+├── assets/ # Static assets (images, icons, fonts)
+├── components/ # Reusable UI components
+│ ├── Button.tsx
+│ ├── Card.tsx
+│ └── Filter.tsx
+├── constants/ # Static data & constants
+│ └── filter.ts
+├── hooks/ # Custom React hooks
+│ └── usePagination.ts
+├── page/ # Page-level components
+│ ├── Home.tsx
+│ ├── ProductDetails.tsx
+│ └── ProductList.tsx
+└── style/ # SCSS styles
+├── components/
+│ ├── \_button.scss
+│ ├── \_card.scss
+│ └── \_filter.scss
+├── page/
+│ ├── \_product-list.scss
+│ └── \_productDetails.scss
+├── \_index.scss
+├── App.scss
+└── index.scss
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Scripts
+
+| Command           | Description              |
+| ----------------- | ------------------------ |
+| `npm run dev`     | Start dev server         |
+| `npm run build`   | Type-check and build     |
+| `npm run preview` | Preview production build |
+| `npm run lint`    | Run ESLint               |
