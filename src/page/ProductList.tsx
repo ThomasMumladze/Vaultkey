@@ -48,11 +48,11 @@ const ProductList = () => {
 
                     <div className="container--product-listing">
                         <div className="container--product-listing--list-sort">
-                            <Button btnFunc={handleFlexDisplay}>
+                            <Button btnFunc={() => {}}>
                                 <CiBoxList />
                                 <p>flex view</p>
                             </Button>
-                            <Button btnFunc={handleGridDisplay}>
+                            <Button btnFunc={() => {}}>
                                 <CiGrid41 />
                                 <p>grid view</p>
                             </Button>
