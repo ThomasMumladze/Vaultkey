@@ -1,0 +1,18 @@
+.btn-primary {
+    align-items: center;
+    border: solid 1px transparent;
+    background-color: rgba(0, 20, 60, 0.1);
+    border-radius: 8px;
+    display: flex;
+    font-size: 1rem;
+    gap: 8px;
+    justify-content: center;
+    padding: 6px 12px;
+    text-transform: capitalize;
+    transition: 0.17s ease-in-out;
+    user-select: none;
+
+    &:hover {
+        background-color: rgba(0, 20, 60, 0.15);
+    }
+}
