@@ -29,5 +29,3 @@ export const genre = [
     "hack & slash",
     "puzzle",
 ];
-
-export const rating = ["5 star - ⭐⭐⭐⭐⭐", "4 star - ⭐⭐⭐⭐", "3 star - ⭐⭐⭐", "2 star - ⭐⭐"];
